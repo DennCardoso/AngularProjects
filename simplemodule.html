@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html np-app="">
+<head><title>AngularJS</title>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="controllers/multicontrollers.js"></script>
+</head>
+<body>
+    <h1>Calculos em AngularJS</h1>
+    <div>
+        <p>
+            <label for="valA">Your A:</label>
+            <input type="number" id="valA" ng-model="valA">
+        </p>
+        <p>
+            <label for="valB">Your B:</label>
+            <input type="number" id="valB" ng-model="valB">
+        </p>
+        <p ng-controller="Math1">
+            <button ng-click="add(valA,valB)">Add</button> Result:{{result}}
+        </p>
+        <p ng-controller="Math2">
+            <button ng-click="multiple(valA,valB)">multiple</button> Result: {{result}}
+        </p>
+        <p ng-controller="Math3">
+            <button ng-click="exponential(valA,valB)">Exponential</button>{{result}}
+        </p>
+    </div>
+</body>
+</html>
