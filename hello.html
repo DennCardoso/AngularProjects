@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title>Hello AngularJS</title>
+    <script src="bower_components/bower_components/angular/angular.min.js"></script>
+    <script src="controllers/hellocontroller.js"></script>
+
+</head>
+<body>
+    <div ng-controller='sayHello'>
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" ng-model="name.text">
+        <p>{{name.text}}, how are you?</p>
+    </div>
+</body>
+</html>

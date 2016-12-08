@@ -1,4 +1,4 @@
-var myApp = angular.module("MultiController",[]);
+var myApp = angular.module('MyController',[]);
 
 myApp.controller('Math1',['$scope',function($scope){
   $scope.result = 0;
