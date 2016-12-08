@@ -1,4 +1,4 @@
-var myApp = angular.module('MyController',[]);
+var myApp = angular.module('MultiController',[]);
 
 myApp.controller('Math1',['$scope',function($scope){
   $scope.result = 0;
@@ -21,6 +21,6 @@ myApp.controller('Math3',['$scope',function($scope){
   $scope.result = 0;
 
   $scope.exponential = function(a,b) {
-      $scope.result = math.pow(a, b);
+      $scope.result = Math.pow(a,b);
   }
 }]);
