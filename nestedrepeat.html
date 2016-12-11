@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="NestedRepeat-binding">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Repeat Data Binding</title>
+    <script src="bower_components/bower_components/angular/angular.min.js"></script>
+    <script src="controllers/nestedrepeated.js"></script>
+    <style>
+        .item {
+            width: 350px;
+            height: 30px;
+            background-color: #ff6e68;
+        }
+        .subitem {
+            margin-left:30px;
+            width: 320px;
+            height: 30px;
+            background-color: #6fff90;
+        }
+    </style>
+</head>
+<body ng-controller="MyController">
+    <h2> Demo Data binding wih nested repeat data</h2>
+    <br>
+    <div ng-repeat="order in orders">
+        <p class="item">{{order.id}} | {{order.transid}} | {{order.customer}} | {{order.created}}</p>
+        <div ng-repeat="item in order.details">
+            <p class="subitem">{{item.name}} | {{item.quantity}} | {{item.price}}</p>
+        </div>
+    </div>
+</body>
+</html>
