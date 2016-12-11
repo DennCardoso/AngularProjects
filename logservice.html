@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="LogService">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Demo Log Service</title>
+    <script src="bower_components/bower_components/angular/angular.min.js"></script>
+    <script src="controllers/logservice.js"></script>
 </head>
 <body>
-
+    <h1>Demo Log Service</h1>
+    <br>
+    <div ng-controller="LogController">
+        <p>
+            <label for="message">Message:</label>
+            <input type="text" id="message" ng-model="message">
+        </p>
+        <p>
+            <button ng-click="$log.log(message)">Log</button>
+            <button ng-click="$log.warn(message)">Warn</button>
+            <button ng-click="$log.debug(message)">Debug</button>
+            <button ng-click="$log.error(message)">Error</button>
+        </p>
+    </div>
 </body>
 </html>
