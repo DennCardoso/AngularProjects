@@ -7,23 +7,23 @@ myApp.service('DataService', function($http){
     this.getData = function(callback){
 
         //method1
-        $http.get('localhost:63342/AngularProjects/jsonfiles/sample.json').success(callback).error(function(callback){
+        $http.get('http://localhost:63342/AngularProjects/jsonfiles/sample.json').success(callback).error(function(callback){
             alert("No data");
             callback(undefined);
         });
 
         //method2
-        $http({
-            method: 'GET',
-            url: 'localhost:63342/AngularProjects/jsonfiles/sample.json',
-            headers: {
-                'Content-type':'application/json'
-            }
-        }).success(function(data){
-            callback(data);
-        }).error(function(){
-            callback(undefined);
-        });
+        //$http({
+        //   method: 'GET',
+        //    url: 'http://localhost:63342/AngularProjects/jsonfiles/sample.json',
+        //    headers: {
+        //        'Content-type':'application/json'
+        //    }
+        //}).success(function(data){
+        //    callback(data);
+        //}).error(function(){
+        //    callback(undefined);
+        //});
 
     };
 });
