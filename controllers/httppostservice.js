@@ -9,7 +9,7 @@ myApp.service('DataService',function($http) {
 
         $http({
             method: 'POST',
-            url: '../jsonfiles/post.json',
+            url: 'jsonfiles/post.json',
             data: data,
             headers: {
                 'Content-type': 'application/json'
